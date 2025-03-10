@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppMinhasCompras.Views.ListaProduto"
              Title="ListaProduto">
-    
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Somar" Clicked="ToolbarItem_Clicked_1" />
         <ToolbarItem Text="Adicionar" Clicked="ToolbarItem_Clicked" />
@@ -18,18 +18,19 @@
     </ContentPage.Resources>
 
     <StackLayout>
-        <SearchBar x:Name="txt.search"
-                   Margin="-15,0,0,0"
+        <SearchBar x:Name="txt_search"
+                   Margin="-15, 0, 0, 0"
                    Placeholder="Busca de Produtos"
-                   TextChanged="txt_search_TextChanged" />
+                   TextChanged="txt_search_TextChanged"/>
+
         <Frame Padding="0" Margin="10" VerticalOptions="FillAndExpand">
             <ListView x:Name="lst_produtos"
-                      IsPullToRefreshEnabled="True"
-                      Refreshing="lst_produtos_Refreshing"
-                      ItemSelected="lst_produtos_ItemSelected">
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="lst_produtos_Refreshing"
+                  ItemSelected="lst_produtos_ItemSelected">
                 <ListView.Header>
-                    <Grid ColumnDefinitions="30,100,80,50,90"
-                      BackgroundColor="{StaticResource Gray100}">
+                    <Grid ColumnDefinitions="30, 100, 80, 50, 90"
+                          BackgroundColor="{StaticResource Gray100}">
                         <Label Grid.Column="0" Text="ID" Padding="5" FontAttributes="Bold" />
                         <Label Grid.Column="1" Text="Descrição" FontAttributes="Bold" />
                         <Label Grid.Column="2" Text="Preço" FontAttributes="Bold" />
@@ -43,10 +44,10 @@
                             <ViewCell.ContextActions>
                                 <MenuItem Text="Remover" Clicked="MenuItem_Clicked" />
                             </ViewCell.ContextActions>
-                            <Grid ColumnDefinitions="30,100,80,50,90">
+                            <Grid ColumnDefinitions="30, 100, 80, 50, 90">
                                 <Label Grid.Column="0" Text="{Binding Id}" Padding="5" />
                                 <Label Grid.Column="1" Text="{Binding Descricao}" />
-                                <Label Grid.Column="2" Text="{Binding Preco,StringFormat='{}{0:c}'}" />
+                                <Label Grid.Column="2" Text="{Binding Preco, StringFormat='{}{0:c}'}" />
                                 <Label Grid.Column="3" Text="{Binding Quantidade}" />
                                 <Label Grid.Column="4" Text="{Binding Total, StringFormat='{}{0:c}'}" />
                             </Grid>
@@ -55,5 +56,6 @@
                 </ListView.ItemTemplate>
             </ListView>
         </Frame>
+
     </StackLayout>
 </ContentPage>
