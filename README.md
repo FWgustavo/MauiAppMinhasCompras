@@ -46,14 +46,48 @@ MauiAppMinhasCompras/
 
 ### Model: Produto.cs
 ```csharp
-public class Produto
+// Utilização da biblioteca SQLite para persistência de dados
+using SQLite;
+
+// Definição do namespace para o modelo de Produto
+namespace MauiAppMinhasCompras.Models
 {
-    public int Id { get; set; }
-    public string Nome { get; set; }
-    public decimal Preco { get; set; }
-    public int Quantidade { get; set; }
-    public decimal Total => Preco * Quantidade;
-}
+    // Classe Produto representa um item em um sistema de compras
+    public class Produto 
+    {
+        // Identificador único do produto
+        // Configurado como chave primária e com incremento automático
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+
+        // Propriedade para armazenar a descrição do produto
+        // Implementa validação para impedir descrições nulas
+        public string Descrição 
+        { 
+            get; 
+            set 
+            {
+                // Verifica se o valor da descrição é nulo
+                if (value == null)
+                {
+                    // Lança uma exceção caso a descrição esteja vazia
+                    throw new Exception("Por favor, preencha a descrição");
+                }
+                // Atribui o valor à descrição
+                _descrição = value;
+            } 
+        }
+
+        // Propriedade para armazenar a quantidade do produto
+        public double Quantidade { get; set; }
+
+        // Propriedade para armazenar o preço do produto
+        public double Preço { get; set; }
+
+        // Propriedade calculada para o valor total (quantidade * preço)
+        public double Total { get => Quantidade * Preço; }
+    } // Fecha classe Produto
+} // Fecha namespace
 ```
 
 ### ViewModel: ProdutoViewModel.cs
