@@ -171,7 +171,7 @@ public class ProdutoService
 
 ## 👥 Contato
 
-- Desenvolvedor: Gustavo Fernando
+- Desenvolvedor: Gustavo Merschbacher
 - GitHub: [@FWgustavo](https://github.com/FWgustavo)
 
 ## 📄 Licença
