@@ -11,7 +11,7 @@ O AppMinhasCompras é um aplicativo móvel multiplataforma desenvolvido em .NET 
 ## 📸 Capturas de Tela
 
 > IMPORTANTE: Substitua pelas screenshots reais do seu aplicativo
-![Tela Inicial](D:\Users\231024\Documents\telainicial)
+![Tela Inicial](D:\Users\231024\Documents\telainicial.png)
 ![Lista de Compras](/caminho/para/lista-compras.png)
 ![Adicionar Compra](/caminho/para/adicionar-compra.png)
 
