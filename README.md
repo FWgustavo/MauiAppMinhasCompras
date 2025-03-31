@@ -4,7 +4,6 @@
 
 O AppMinhasCompras é um aplicativo móvel multiplataforma desenvolvido em .NET MAUI para gerenciar listas de compras e controlar gastos pessoais.
 
-## 🎬 Demonstração do Aplicativo
 
 
 ![Demonstração do App](https://i.gifer.com/X5NZ.gif)
@@ -12,7 +11,7 @@ O AppMinhasCompras é um aplicativo móvel multiplataforma desenvolvido em .NET 
 ## 📸 Capturas de Tela
 
 > IMPORTANTE: Substitua pelas screenshots reais do seu aplicativo
-![Tela Inicial](/caminho/para/tela-inicial.png)
+![Tela Inicial](repos/MauiAppMinhasCompras/MauiAppMinhasCompras/Resources/Images/telainicial.png)
 ![Lista de Compras](/caminho/para/lista-compras.png)
 ![Adicionar Compra](/caminho/para/adicionar-compra.png)
 
